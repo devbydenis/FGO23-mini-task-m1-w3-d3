@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    .container {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 300px);
+      grid-template-areas: 
+        " satu  satu  empat "
+        " dua   tiga  empat "
+        " lima  lima  lima "
+      ;
+    }
+
+    .container > .item {
+      border: 1px dashed orangered;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .container > .item:first-child {
+      grid-area: satu;
+    }
+    .container > .item:nth-child(2) {
+      grid-area: dua;
+    }
+    .container > .item:nth-child(3) {
+      grid-area: tiga;
+    }
+    .container > .item:nth-child(4) {
+      grid-area: empat;
+    }
+    .container > .item:last-child {
+      grid-area: lima;
+    }
+
+    .container > .item:first-child,
+    .container > .item:nth-child(2),
+    .container > .item:nth-child(3),
+    .container > .item:nth-child(4),
+    .container > .item:last-child {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>

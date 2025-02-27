@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container-flex {
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
+.container-flex > div {
+  width: 100px;
+  height: 50px;
+  border: 2px solid green;
+}
+.container-flex > div:first-child {
+  flex-basis: 50px;
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+.container-flex > div:nth-child(2) {
+  flex-basis: 100px;
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+.container-flex > div:last-child {
+  flex: 0 0 200px;
+}
+
+  </style>
+</head>
+<body>
+  <section class="container-flex">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+  </section>
+</body>
+</html>
